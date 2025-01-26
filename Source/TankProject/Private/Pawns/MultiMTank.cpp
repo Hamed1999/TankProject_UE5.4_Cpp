@@ -135,6 +135,7 @@ void AMultiMTank::HandleTankPhysics()
 	TankBody->SetMassOverrideInKg(TEXT("Masss (Kg)"),650.f,true);
 	TankBody->SetLinearDamping(0.02);
 	TankBody->SetAngularDamping(0.6);
+	
 }
 
 void AMultiMTank::ConstructBulletSpawnPoints()
@@ -225,6 +226,10 @@ void AMultiMTank::Tick(float DeltaTime)
 	{
 		SetRegualrMode();
 	}
+	FRotator CurrentRotation = GetActorRotation();
+	CurrentRotation.Pitch = 0.0f;
+	CurrentRotation.Roll = 0.0f;
+	SetActorRotation(CurrentRotation);
 }
 
 void AMultiMTank::ChangeTankMode(const struct FInputActionValue& val)

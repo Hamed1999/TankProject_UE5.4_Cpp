@@ -73,7 +73,6 @@ private:
 	void ZoomCamera(float val);
 	void ZoomCamera(const struct FInputActionValue& val);
 	void ChangeTankMode(const struct FInputActionValue& val);
-	
 	/**
 	 * Properties | Staic Mesh Components
 	 */

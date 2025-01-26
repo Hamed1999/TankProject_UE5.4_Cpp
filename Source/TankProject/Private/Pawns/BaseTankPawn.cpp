@@ -107,7 +107,9 @@ AProjectile*  ABaseTankPawn::Fire(const FTransform& Transform, TSubclassOf<AProj
 	// ProjectileClass = AProjectile::StaticClass();
 	AProjectile* SpawnedProjectile = GetWorld()->SpawnActor<AProjectile>(ProjectileClass, Transform);
 	if (bFireItNow)
+	{
 		SpawnedProjectile->FireItNow();
-		SpawnedProjectile->SetOwner(this);
+	}
+	SpawnedProjectile->SetOwner(this);
 	return SpawnedProjectile;
 }

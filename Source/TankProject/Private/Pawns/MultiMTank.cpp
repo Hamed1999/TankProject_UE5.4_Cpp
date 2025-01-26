@@ -165,7 +165,6 @@ AMultiMTank::AMultiMTank()
 	 * For TurnRight
 	 */
 	this->bUseControllerRotationYaw = true;
-	HandleTankPhysics();
 	BulletClass = AProjectile::StaticClass();
 }
 
@@ -185,6 +184,7 @@ void AMultiMTank::CreateMappingContext()
 void AMultiMTank::BeginPlay()
 {
 	Super::BeginPlay();
+	HandleTankPhysics();
 	CreateMappingContext();
 }
 

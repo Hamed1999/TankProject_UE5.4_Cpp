@@ -177,7 +177,6 @@ AFighterTank::AFighterTank()
 	 * For TurnRight
 	 */
 	this->bUseControllerRotationYaw = false;
-	HandleTankPhysics();
 }
 
 void AFighterTank::CreateMappingContext()
@@ -196,6 +195,7 @@ void AFighterTank::BeginPlay()
 {
 	Super::BeginPlay();
 	CreateMappingContext();
+	HandleTankPhysics();
 }
 
 // Called every frame

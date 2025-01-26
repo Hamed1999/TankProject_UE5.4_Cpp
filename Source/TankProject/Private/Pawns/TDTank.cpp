@@ -177,7 +177,6 @@ ATDTank::ATDTank()
 	 * For TurnRight
 	 */
 	this->bUseControllerRotationYaw = false;
-	HandleTankPhysics();
 }
 
 void ATDTank::CreateMappingContext()
@@ -196,6 +195,7 @@ void ATDTank::BeginPlay()
 {
 	Super::BeginPlay();
 	CreateMappingContext();
+	HandleTankPhysics();
 }
 
 void ATDTank::RotateTurretTowardsTarget(FVector TargetLocation)
